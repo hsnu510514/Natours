@@ -1,0 +1,43 @@
+/* 設定font */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 30px;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+  /* 消除動畫錯誤(原本用於隱藏物件背面)*/
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+  
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    /* 
+    animation-delay: 3s;                         動畫前延遲秒數
+    animation-iteration-count: 3;                重複次數
+    */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+  
+    animation: moveInRight 1s ease-out;
+  }
+}
