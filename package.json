@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "Advanced CSS and Sass Flexbox, Grid, Animations and More! Your progress",
   "main": "index.js",
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "save-dev": "^2.0.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hsnu510514/Natours/issues"
   },
-  "homepage": "https://github.com/hsnu510514/Natours#readme"
+  "homepage": "https://github.com/hsnu510514/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }
