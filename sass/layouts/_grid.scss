@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: rgb(180, 174, 174);
   margin: 0 auto;
   
   &:not(:last-child) {
@@ -13,7 +12,6 @@
   // ^= 開頭為...
   // *= 包含...
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
