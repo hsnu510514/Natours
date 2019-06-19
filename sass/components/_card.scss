@@ -46,7 +46,6 @@
     }
   }
 
-  // FRONT SIDE STYLING
   &:hover &__side--front {
     transform: rotateY(-180deg);
   }
@@ -55,10 +54,15 @@
     transform: rotateY(0);
   }
 
+  // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     
     &--1 {
       background-image: linear-gradient(
@@ -66,27 +70,23 @@
         $color-secondary-light,
         $color-secondary-dark), 
       url(../img/nat-5.jpg);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     }
+
     &--2 {
       background-image: linear-gradient(
         to right bottom,
         $color-primary-light,
         $color-primary-dark), 
       url(../img/nat-6.jpg);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
+
     &--3 {
       background-image: linear-gradient(
         to right bottom,
         $color-tertiary-light,
         $color-tertiary-dark), 
       url(../img/nat-7.jpg);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
   }
 
