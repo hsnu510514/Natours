@@ -2,25 +2,24 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 30px;
 }
 
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 
   /* 消除動畫錯誤(原本用於隱藏物件背面)*/
   backface-visibility: hidden;
 
   &--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
   
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -30,15 +29,24 @@ body {
     animation-delay: 3s;                         動畫前延遲秒數
     animation-iteration-count: 3;                重複次數
     */
+      
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
   }
 
   &--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
-  
+    letter-spacing: 1.75rem; 
     animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -55,6 +63,14 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
